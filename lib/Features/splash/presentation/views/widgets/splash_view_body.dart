@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:your_book_app/Features/home/presentation/views/home_view.dart';
+import 'package:go_router/go_router.dart';
 import 'package:your_book_app/Features/splash/presentation/views/widgets/sliding_text.dart';
-
 import '../../../../../core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -23,8 +22,11 @@ class _SplashViewBodyState extends State<SplashViewBody> with TickerProviderStat
     initSlidingAnimation();
     navigateToHome();
   }
-
-
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody> with TickerProviderStat
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(Assets.logo),
+          Image.asset(AssetsData.logo),
         const  SizedBox(
             height: 8,
           ),
@@ -62,8 +64,8 @@ class _SplashViewBodyState extends State<SplashViewBody> with TickerProviderStat
         seconds: 3
     ),
           () {
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeView(),));
-      },
+      GoRouter.of(context).push('/homeView');
+          },
     );
   }
 }
