@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 
 class CustomBooksListView extends StatelessWidget {
-   CustomBooksListView({
+   const CustomBooksListView({
      super.key,
      required this.listHeight
    });
-  double listHeight;
+  final double listHeight;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

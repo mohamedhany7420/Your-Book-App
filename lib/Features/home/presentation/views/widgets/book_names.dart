@@ -2,15 +2,15 @@
 import 'package:flutter/material.dart';
 
 class BookNames extends StatelessWidget {
-   BookNames({
+   const BookNames({
     super.key,
     required this.style1,
     required this.style2,
      required this.crossAxisAlignment
   });
-  TextStyle style1;
-  TextStyle style2;
-  dynamic crossAxisAlignment;
+  final TextStyle style1;
+  final TextStyle style2;
+  final dynamic crossAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Column(

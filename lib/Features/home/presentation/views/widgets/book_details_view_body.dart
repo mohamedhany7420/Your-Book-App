@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:your_book_app/Features/home/presentation/views/widgets/Custom_books_list_view.dart';
+import 'package:your_book_app/Features/home/presentation/views/widgets/custom_books_list_view.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_app_bar.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_names.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_rating.dart';
@@ -45,22 +45,22 @@ class BookDetailsViewBody extends StatelessWidget {
            const SizedBox(
              height: 40,
            ),
-           Row(
+           const Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
                CustomButton(
                    text: '19.99€',
                    textColor: Colors.black,
                    buttonColor: Colors.white,
-                   leftRadius: const Radius.circular(14),
+                   leftRadius: Radius.circular(14),
                    rightRadius: Radius.zero,
                ),
                CustomButton(
                  text: 'Free preview',
                  textColor: Colors.white,
-                 buttonColor: const Color(0xFFEF8262),
+                 buttonColor: Color(0xFFEF8262),
                  leftRadius: Radius.zero,
-                 rightRadius: const Radius.circular(14),
+                 rightRadius: Radius.circular(14),
                ),
              ],
            ),

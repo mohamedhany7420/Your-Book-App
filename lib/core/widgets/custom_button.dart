@@ -4,7 +4,7 @@ import 'package:your_book_app/core/utils/styles.dart';
 import '../../constants.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({
+  const CustomButton({
     super.key,
     required this.text,
     required this.buttonColor,
@@ -13,11 +13,11 @@ class CustomButton extends StatelessWidget {
     required this.textColor
   }
 );
-  String text;
-  Color buttonColor;
-  Color textColor;
-  Radius leftRadius;
-  Radius rightRadius;
+  final String text;
+  final Color buttonColor;
+  final Color textColor;
+  final Radius leftRadius;
+  final Radius rightRadius;
   @override
   Widget build(BuildContext context) {
     return Container(
