@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:your_book_app/Features/home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:your_book_app/Features/search/presentation/views/widgets/search_results_section.dart';
-import 'package:your_book_app/core/utils/styles.dart';
-
 import 'search_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
