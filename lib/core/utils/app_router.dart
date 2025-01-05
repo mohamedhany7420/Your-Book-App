@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:your_book_app/Features/home/presentation/views/book_details_view.dart';
 import 'package:your_book_app/Features/home/presentation/views/home_view.dart';
+import 'package:your_book_app/Features/search/presentation/views/search_view.dart';
 import 'package:your_book_app/Features/splash/presentation/views/splash_view.dart';
 
 abstract class AppRouter{
@@ -25,7 +26,12 @@ abstract class AppRouter{
           return const BookDetailsView();
         },
       ),
-
+      GoRoute(
+        path: '/searchView',
+        builder: (BuildContext context, GoRouterState state) {
+          return const SearchView();
+        },
+      ),
     ],
   );
 }
