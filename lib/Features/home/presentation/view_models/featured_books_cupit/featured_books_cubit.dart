@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
 import 'package:your_book_app/Features/home/data/repos/home_repo.dart';
 
 import '../../../data/models/book_model.dart';
