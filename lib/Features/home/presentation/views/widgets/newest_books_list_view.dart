@@ -2,7 +2,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:your_book_app/Features/home/presentation/view_models/newest_books_cupit/newest_books_cubit.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/newest_book_item.dart';
-import 'package:your_book_app/Features/home/presentation/views/widgets/custom_loading_indicator.dart';
+import 'package:your_book_app/core/widgets/custom_loading_indicator.dart';
 import 'package:your_book_app/core/widgets/custom_error_widget.dart';
 
 class BestSellerListView extends StatelessWidget {

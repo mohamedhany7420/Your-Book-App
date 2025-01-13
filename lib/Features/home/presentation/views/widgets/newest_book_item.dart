@@ -13,33 +13,36 @@ class BestSellerItem extends StatelessWidget {
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-    Padding(
-      padding: const EdgeInsets.only(right: 20.0),
-      child: ClipRRect(
-      borderRadius: BorderRadius.circular(14),
-      child:  CachedNetworkImage(
-        height: MediaQuery.of(context).size.height * 0.15,
-        width: (MediaQuery.of(context).size.height * 0.15) / 1.5 ,
-        imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail.toString(),
-        fit: BoxFit.fill,
-        errorWidget:  (context, url, error) {
-          return Text(error.toString(),
-        style: const TextStyle(
-          fontSize: 4
-        ),);
+    return GestureDetector(
+        onTap: () {
+      GoRouter.of(context).push(
+          '/bookDetailsView',
+        extra: bookModel
+      );
+    },
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+      Padding(
+        padding: const EdgeInsets.only(right: 20.0),
+        child: ClipRRect(
+        borderRadius: BorderRadius.circular(14),
+        child:  CachedNetworkImage(
+          height: MediaQuery.of(context).size.height * 0.15,
+          width: (MediaQuery.of(context).size.height * 0.15) / 1.5 ,
+          imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail.toString(),
+          fit: BoxFit.fill,
+          errorWidget:  (context, url, error) {
+            return Text(error.toString(),
+          style: const TextStyle(
+            fontSize: 4
+          ),);
 
-        }
-      )
+          }
+        )
+        ),
       ),
-    ),
-        Expanded(
-          child: GestureDetector(
-            onTap: () {
-              GoRouter.of(context).push('/bookDetailsView');
-            },
+          Expanded(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Column(
@@ -76,10 +79,10 @@ class BestSellerItem extends StatelessWidget {
                   )
                 ],
               ),
-            )
-          ),
-        )
-      ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

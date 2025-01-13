@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:your_book_app/Features/home/presentation/view_models/featured_books_cupit/featured_books_cubit.dart';
+import 'package:your_book_app/Features/home/presentation/view_models/similar_books_cupit/similar_books_cubit.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:your_book_app/core/widgets/custom_loading_indicator.dart';
 import '../../../../../core/widgets/custom_error_widget.dart';
 
-class CustomBooksListView extends StatelessWidget {
-  const CustomBooksListView({
+class SimilarBooksListView extends StatelessWidget {
+  const SimilarBooksListView({
     super.key,
     required this.listHeight
   });
@@ -17,9 +17,9 @@ class CustomBooksListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: listHeight,
-      child: BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
+      child: BlocBuilder<SimilarBooksCubit, SimilarBooksState>(
         builder: (context, state) {
-          if (state is FeaturedBooksSuccess) {
+          if (state is SimilarBooksSuccess) {
             return ListView.builder(
               clipBehavior: Clip.none,
               physics: const BouncingScrollPhysics(),
@@ -35,7 +35,7 @@ class CustomBooksListView extends StatelessWidget {
                 );
               },
             );
-          } else if(state is FeaturedBooksFailure){
+          } else if(state is SimilarBooksFailure){
             return CustomErrorWidget(errMessage: state.errMessage);
           } else
           {
