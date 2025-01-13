@@ -6,8 +6,10 @@ class BookNames extends StatelessWidget {
     super.key,
     required this.style1,
     required this.style2,
-     required this.crossAxisAlignment
+     required this.crossAxisAlignment, required this.bookTitle, required this.author
   });
+  final String bookTitle;
+final String author;
   final TextStyle style1;
   final TextStyle style2;
   final dynamic crossAxisAlignment;
@@ -17,13 +19,13 @@ class BookNames extends StatelessWidget {
       crossAxisAlignment: crossAxisAlignment,
       children: [
         Text(
-          'The Jungle Book',
+          bookTitle,
           style: style1,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
          Text(
-          'Rudyard Kipling',
+          author,
           style: style2,
         ),
       ],

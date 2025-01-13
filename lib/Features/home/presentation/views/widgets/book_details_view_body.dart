@@ -24,11 +24,16 @@ class BookDetailsViewBody extends StatelessWidget {
          crossAxisAlignment: CrossAxisAlignment.center,
          children: [
            const BookDetailsAppBar(),
-           CustomBookItem(height: height * 0.33),
+           CustomBookItem(
+             height: height * 0.33,
+             imageUrl: 'https://th.bing.com/th/id/OIP.s76yZFtuSkGEgIUYjnPt7gHaE9?rs=1&pid=ImgDetMain',
+           ),
            const SizedBox(
              height: 30,
            ),
             BookNames(
+              author: 'giuhoih',
+              bookTitle: 'gkjhk',
               crossAxisAlignment: CrossAxisAlignment.center,
               style1: Styles.textStyle30.copyWith(
                 fontSize: 36,
@@ -41,7 +46,10 @@ class BookDetailsViewBody extends StatelessWidget {
            const SizedBox(
              height: 5
            ),
-           const BookRating(),
+           const BookRating(
+             counts: 0,
+             rating: 0,
+           ),
            const SizedBox(
              height: 40,
            ),
