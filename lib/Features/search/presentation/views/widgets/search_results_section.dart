@@ -19,7 +19,7 @@ class SearchResultsSection extends StatelessWidget {
               style: Styles.textStyle20,
             ),
           ),
-          BestSellerListView(),
+          NewestBooksListView(),
         ],
       ),
     );

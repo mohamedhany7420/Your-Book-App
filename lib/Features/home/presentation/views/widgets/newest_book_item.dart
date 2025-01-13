@@ -8,8 +8,8 @@ import 'package:your_book_app/core/utils/styles.dart';
 import '../../../../../constants.dart';
 import 'book_names.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key, required this.bookModel});
+class NewestBookItem extends StatelessWidget {
+  const NewestBookItem({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {

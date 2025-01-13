@@ -5,8 +5,8 @@ import 'package:your_book_app/Features/home/presentation/views/widgets/newest_bo
 import 'package:your_book_app/core/widgets/custom_loading_indicator.dart';
 import 'package:your_book_app/core/widgets/custom_error_widget.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class NewestBooksListView extends StatelessWidget {
+  const NewestBooksListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class BestSellerListView extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return  Padding(
                     padding: const EdgeInsets.only(bottom: 16.0),
-                    child: BestSellerItem(
+                    child: NewestBookItem(
                       bookModel: state.books[index],
                     ),
                   );

@@ -19,13 +19,15 @@ final String author;
       crossAxisAlignment: crossAxisAlignment,
       children: [
         Text(
+          textAlign: TextAlign.center,
           bookTitle,
           style: style1,
           maxLines: 2,
           overflow: TextOverflow.ellipsis,
         ),
          Text(
-          author,
+           textAlign: TextAlign.center,
+           author,
           style: style2,
         ),
       ],

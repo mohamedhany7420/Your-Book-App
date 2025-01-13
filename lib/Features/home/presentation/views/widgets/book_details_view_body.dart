@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:your_book_app/Features/home/data/models/book_model.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_section.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_app_bar.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import 'similar_books_section.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -23,6 +24,29 @@ class BookDetailsViewBody extends StatelessWidget {
             BookDetailsSection(
              book: bookModel,
                        ),
+           const SizedBox(
+             height: 40,
+           ),
+           const Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               CustomButton(
+                 text: '19.99€',
+                 textColor: Colors.black,
+                 buttonColor: Colors.white,
+                 leftRadius: Radius.circular(14),
+                 rightRadius: Radius.zero,
+               ),
+               CustomButton(
+                 text: 'Free preview',
+                 textColor: Colors.white,
+                 buttonColor: Color(0xFFEF8262),
+                 leftRadius: Radius.zero,
+                 rightRadius: Radius.circular(14),
+               ),
+             ],
+           ),
+
            const SizedBox(
              height: 60,
            ),

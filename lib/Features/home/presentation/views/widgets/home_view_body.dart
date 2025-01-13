@@ -31,7 +31,7 @@ class HomeViewBody extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const BestSellerListView(),
+            const NewestBooksListView(),
           ],
         ),
       ),
