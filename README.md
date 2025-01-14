@@ -10,7 +10,8 @@ The `get_it` package is used for dependency injection, and the `dio` package is 
 - Browse books
 - View book details
 - Search for books
-- Add books to favorites
+- open free books as pdf
+- pinned section for programming books
 
 ## Architecture
 
