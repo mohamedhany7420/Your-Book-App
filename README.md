@@ -41,7 +41,6 @@ The app adheres to the following SOLID principles:
 - **Open/Closed Principle**: Classes are open for extension but closed for modification.
 
 ## Project Structure
-
 lib/
 ├── core/
 │   ├── errors/
@@ -91,4 +90,5 @@ lib/
 ├── main.dart
 └── constants/
     ├── app_colors.dart
-    ├── app_strings.dart 
+    ├── app_strings.dart
+    └── app_validators.dart
