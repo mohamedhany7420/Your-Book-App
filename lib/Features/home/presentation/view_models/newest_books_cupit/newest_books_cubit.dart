@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:your_book_app/Features/home/data/repos/home_repo.dart';
 
-import '../../../data/models/book_model.dart';
+import '../../../../../core/book_model/book_model.dart';
+
 
 part 'newest_books_state.dart';
 

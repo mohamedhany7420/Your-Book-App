@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:your_book_app/Features/home/data/models/book_model.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_section.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_app_bar.dart';
+import 'package:your_book_app/core/utils/functions/url_launcher.dart';
+import '../../../../../core/book_model/book_model.dart';
 import '../../../../../core/widgets/custom_button.dart';
 import 'similar_books_section.dart';
 
@@ -27,22 +28,25 @@ class BookDetailsViewBody extends StatelessWidget {
            const SizedBox(
              height: 40,
            ),
-           const Row(
+            Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-               CustomButton(
-                 text: '19.99€',
+               const CustomButton(
+                 text: 'Free',
                  textColor: Colors.black,
                  buttonColor: Colors.white,
                  leftRadius: Radius.circular(14),
                  rightRadius: Radius.zero,
                ),
                CustomButton(
-                 text: 'Free preview',
+                 onPressed: () {
+                   launchCustomUrl(context, bookModel.volumeInfo.previewLink);
+                 },
+                 text: getText(bookModel),
                  textColor: Colors.white,
-                 buttonColor: Color(0xFFEF8262),
+                 buttonColor: const Color(0xFFEF8262),
                  leftRadius: Radius.zero,
-                 rightRadius: Radius.circular(14),
+                 rightRadius: const Radius.circular(14),
                ),
              ],
            ),
@@ -60,3 +64,11 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
+String getText(BookModel bookModel){
+  if(bookModel.volumeInfo.previewLink == null){
+    return 'Not Available';
+  }else{
+    return 'Preview';
+  }
+}
+

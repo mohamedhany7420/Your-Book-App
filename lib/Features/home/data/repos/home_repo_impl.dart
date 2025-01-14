@@ -1,9 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:your_book_app/Features/home/data/models/book_model.dart';
 import 'package:your_book_app/Features/home/data/repos/home_repo.dart';
 import 'package:your_book_app/core/errors/failure.dart';
 import 'package:your_book_app/core/utils/api_service.dart';
+
+import '../../../../core/book_model/book_model.dart';
 
 class HomeRepoImpl implements HomeRepo{
   HomeRepoImpl(this.apiService);

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:your_book_app/Features/home/data/models/book_model.dart';
 import 'package:your_book_app/Features/home/presentation/view_models/similar_books_cupit/similar_books_cubit.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/book_details_view_body.dart';
+
+import '../../../../core/book_model/book_model.dart';
 
 class BookDetailsView extends StatefulWidget {
   const BookDetailsView({super.key, required this.bookModel});
