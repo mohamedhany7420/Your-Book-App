@@ -21,9 +21,11 @@ class CustomButton extends StatelessWidget {
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
+   double height = MediaQuery.of(context).size.height;
+   double width = MediaQuery.of(context).size.width;
     return Container(
-      height: 60,
-      width: 220,
+      height: height * .06,
+      width: width * 0.35,
       decoration: BoxDecoration(
         color: buttonColor,
         borderRadius: BorderRadius.horizontal(
@@ -33,12 +35,12 @@ class CustomButton extends StatelessWidget {
       ),
       child: TextButton(
         style: const ButtonStyle(
-          alignment: Alignment.center
+          alignment: Alignment.topCenter
         ),
           onPressed: onPressed,
           child: Text(
             text,
-            style: Styles.textStyle20.copyWith(
+            style: Styles.textStyle16.copyWith(
               fontWeight: FontWeight.bold,
               color: textColor,
                 fontFamily: kGtSectraFine

@@ -17,7 +17,7 @@ class BookDetailsViewBody extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
      body: Padding(
-       padding: const EdgeInsets.symmetric(horizontal: 30.0),
+       padding: const EdgeInsets.symmetric(horizontal: 20.0),
        child: Column(
          crossAxisAlignment: CrossAxisAlignment.center,
          children: [
@@ -26,9 +26,9 @@ class BookDetailsViewBody extends StatelessWidget {
              book: bookModel,
                        ),
            const SizedBox(
-             height: 40,
+             height: 20 ,
            ),
-            Row(
+              Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
                const CustomButton(
@@ -51,12 +51,12 @@ class BookDetailsViewBody extends StatelessWidget {
              ],
            ),
 
-           const SizedBox(
-             height: 60,
+           const Spacer(
+             flex: 2,
            ),
            SimilarBooksSection(height: height),
-           const SizedBox(
-             height: 30,
+           const Spacer(
+             flex: 1,
            ),
          ],
        ),

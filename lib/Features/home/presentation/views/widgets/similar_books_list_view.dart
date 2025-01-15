@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:your_book_app/Features/home/presentation/view_models/similar_books_cupit/similar_books_cubit.dart';
 import 'package:your_book_app/Features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:your_book_app/core/widgets/custom_loading_indicator.dart';
@@ -26,11 +27,19 @@ class SimilarBooksListView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 16),
-                  child: CustomBookItem(
-                    imageUrl: state.books[index].volumeInfo.imageLinks!.thumbnail,
-                    height: listHeight,
+                return GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context).push(
+                        '/bookDetailsView',
+                        extra: state.books[index]
+                    );
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: CustomBookItem(
+                      imageUrl: state.books[index].volumeInfo.imageLinks!.thumbnail,
+                      height: listHeight,
+                    ),
                   ),
                 );
               },

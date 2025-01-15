@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric( horizontal: 30.0),
+        padding: const EdgeInsets.symmetric( horizontal: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -22,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
               listHeight: MediaQuery.of(context).size.height * 0.27,
             ),
             const SizedBox(
-              height: 50.0,
+              height: 20.0,
             ),
             const Text(
                 'New Books',

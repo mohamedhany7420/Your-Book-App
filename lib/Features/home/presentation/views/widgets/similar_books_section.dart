@@ -17,7 +17,7 @@ class SimilarBooksSection extends StatelessWidget {
       children: [
         const Text(
           'You can also like',
-          style: Styles.textStyle20,
+          style: Styles.textStyle16,
         ),
         const SizedBox(
           height: 10,

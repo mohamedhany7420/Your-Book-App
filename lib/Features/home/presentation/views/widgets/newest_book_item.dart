@@ -21,15 +21,15 @@ class NewestBookItem extends StatelessWidget {
       );
     },
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
       Padding(
         padding: const EdgeInsets.only(right: 20.0),
         child: ClipRRect(
         borderRadius: BorderRadius.circular(14),
         child:  CachedNetworkImage(
-          height: MediaQuery.of(context).size.height * 0.15,
-          width: (MediaQuery.of(context).size.height * 0.15) / 1.5 ,
+          height: MediaQuery.of(context).size.height * 0.2,
+          width: (MediaQuery.of(context).size.height * 0.2) / 1.5 ,
           imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail.toString(),
           fit: BoxFit.fill,
           errorWidget:  (context, url, error) {
@@ -43,42 +43,39 @@ class NewestBookItem extends StatelessWidget {
         ),
       ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                   BookNames(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                     style1: Styles.textStyle20.copyWith(
-                         fontFamily: kGtSectraFine,
-                         fontSize: 20
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                 BookNames(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   style1: Styles.textStyle20.copyWith(
+                       fontFamily: kGtSectraFine,
+                     fontSize: 18
                      ),
-                     style2: Styles.textStyle14,
-                     bookTitle: bookModel.volumeInfo.title.toString(),
-                     author: bookModel.volumeInfo.authors?[0].toString()?? 'Unknown',
-                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          'Free',
-                          style: Styles.textStyle20.copyWith(
-                              fontWeight: FontWeight.bold
-                          ),
+                   style2: Styles.textStyle14,
+                   bookTitle: bookModel.volumeInfo.title.toString(),
+                   author: bookModel.volumeInfo.authors?[0].toString()?? 'Unknown',
+                 ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 16.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Free',
+                        style: Styles.textStyle20.copyWith(
+                            fontWeight: FontWeight.bold
                         ),
-                        const Spacer(),
-                         BookRating(
-                          rating: bookModel.volumeInfo.averageRating ?? 0 ,
-                          counts: bookModel.volumeInfo.pageCount ?? 0,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                      ),
+                      const Spacer(),
+                       BookRating(
+                        rating: bookModel.volumeInfo.averageRating ?? 0 ,
+                        counts: bookModel.volumeInfo.pageCount ?? 0,
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
           )
         ],
