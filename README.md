@@ -10,7 +10,8 @@ The `get_it` package is used for dependency injection, and the `dio` package is 
 - Browse books
 - View book details
 - Search for books
-- Add books to favorites
+- open free books as pdf
+- pinned section for programming books
 
 ## Architecture
 
@@ -41,54 +42,104 @@ The app adheres to the following SOLID principles:
 - **Open/Closed Principle**: Classes are open for extension but closed for modification.
 
 ## Project Structure
-
 lib/
+
 ├── core/
+
 │   ├── errors/
+
 │   │   └── failures.dart
+
 │   ├── models/
+
 │   │   └── book_model.dart
+
 │   ├── widgets/
+
 │   │   └── ...
+
 │   ├── utils/
+
 │       ├── functions/
+
 │       │   └── ...
+
 │       ├── assets/
+
 │       │   └── ...
+
 │       ├── approuter.dart
+
 │       ├── api_service.dart
+
 │       ├── service_locator.dart
+
 │       └── styles/
+
 │           └── ...
+
 ├── features/
+
+
 │   ├── search/
+
 │   │   ├── data/
+
 │   │   │   └── repositories/
+
 │   │   │       └── search_repository.dart
+
 │   │   ├── presentation/
+
 │   │   │   ├── view/
+
 │   │   │   │   └── search_page.dart
+
 │   │   │   └── viewmodel/
+
 │   │   │       └── search_cubit.dart
+
 │   ├── splash/
+
 │   │   └── presentation/
+
 │   │       └── view/
+
 │   │           └── splash_page.dart
+
 │   ├── home/
+
 │   │   ├── data/
+
 │   │   │   └── repositories/
+
 │   │   │       └── home_repository.dart
+
 │   │   ├── presentation/
+
 │   │   │   ├── view/
+
 │   │   │   │   ├── home_screen.dart
+
 │   │   │   │   └── book_details_screen.dart
+
 │   │   │   └── viewmodel/
+
 │   │   │       └── home_cubit.dart
+
 ├── widgets/
+
 │   ├── custom_button.dart
+
 │   ├── loading_indicator.dart
+
 │   └── ...
+
 ├── main.dart
+
 └── constants/
     ├── app_colors.dart
-    ├── app_strings.dart 
+    ├── app_strings.dart
+    
+
+
