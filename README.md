@@ -6,6 +6,8 @@ follows the MVVM (Model-View-ViewModel) architecture, and adheres to SOLID princ
 The `get_it` package is used for dependency injection, and the `dio` package is used for API interaction.
 
 ## Screenshots
+!alt text
+!logo
 !https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_3_2025-01-30_08-27-58.jpg
 !https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_4_2025-01-30_08-27-58.jpg
 !https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_6_2025-01-30_08-27-58.jpg
