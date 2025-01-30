@@ -5,6 +5,14 @@ The app is built using the Cubit pattern for state management,
 follows the MVVM (Model-View-ViewModel) architecture, and adheres to SOLID principles.
 The `get_it` package is used for dependency injection, and the `dio` package is used for API interaction.
 
+## Screenshots
+!https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_3_2025-01-30_08-27-58.jpg
+!https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_4_2025-01-30_08-27-58.jpg
+!https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_6_2025-01-30_08-27-58.jpg
+!https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_1_2025-01-30_08-27-58.jpg
+!https://github.com/mohamedhany7420/Your-Book-App/blob/master/photo_5_2025-01-30_08-27-58.jpg
+
+
 ## Features
 
 - Browse books
