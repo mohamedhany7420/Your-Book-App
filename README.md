@@ -6,7 +6,13 @@ follows the MVVM (Model-View-ViewModel) architecture, and adheres to SOLID princ
 The `get_it` package is used for dependency injection, and the `dio` package is used for API interaction.
 
 ## Screenshots
-![image alt](https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_3_2025-01-30_08-27-58.jpg) ![image alt](https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_4_2025-01-30_08-27-58.jpg)  ![image alt](https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_5_2025-01-30_08-27-58.jpg)![image alt](https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_6_2025-01-30_08-27-58.jpg)  
+
+<p align="center">
+  <img src="https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_3_2025-01-30_08-27-58.jpg" alt="Screenshot 1" width="200"/>
+  <img src="https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_4_2025-01-30_08-27-58.jpg" alt="Screenshot 2" width="200"/>
+  <img src="https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_5_2025-01-30_08-27-58.jpg" alt="Screenshot 3" width="200"/>
+  <img src="https://github.com/mohamedhany7420/Your-Book-App/blob/9deb07fecb2d3e68b67e2708b3f03415d6bbf7ba/photo_6_2025-01-30_08-27-58.jpg" alt="Screenshot 4" width="200"/>
+</p>
 
 ## Features
 
@@ -44,105 +50,5 @@ The app adheres to the following SOLID principles:
 - **Single Responsibility Principle**: Each class has a single responsibility.
 - **Open/Closed Principle**: Classes are open for extension but closed for modification.
 
-## Project Structure
-lib/
-
-├── core/
-
-│   ├── errors/
-
-│   │   └── failures.dart
-
-│   ├── models/
-
-│   │   └── book_model.dart
-
-│   ├── widgets/
-
-│   │   └── ...
-
-│   ├── utils/
-
-│       ├── functions/
-
-│       │   └── ...
-
-│       ├── assets/
-
-│       │   └── ...
-
-│       ├── approuter.dart
-
-│       ├── api_service.dart
-
-│       ├── service_locator.dart
-
-│       └── styles/
-
-│           └── ...
-
-├── features/
-
-
-│   ├── search/
-
-│   │   ├── data/
-
-│   │   │   └── repositories/
-
-│   │   │       └── search_repository.dart
-
-│   │   ├── presentation/
-
-│   │   │   ├── view/
-
-│   │   │   │   └── search_page.dart
-
-│   │   │   └── viewmodel/
-
-│   │   │       └── search_cubit.dart
-
-│   ├── splash/
-
-│   │   └── presentation/
-
-│   │       └── view/
-
-│   │           └── splash_page.dart
-
-│   ├── home/
-
-│   │   ├── data/
-
-│   │   │   └── repositories/
-
-│   │   │       └── home_repository.dart
-
-│   │   ├── presentation/
-
-│   │   │   ├── view/
-
-│   │   │   │   ├── home_screen.dart
-
-│   │   │   │   └── book_details_screen.dart
-
-│   │   │   └── viewmodel/
-
-│   │   │       └── home_cubit.dart
-
-├── widgets/
-
-│   ├── custom_button.dart
-
-│   ├── loading_indicator.dart
-
-│   └── ...
-
-├── main.dart
-
-└── constants/
-    ├── app_colors.dart
-    ├── app_strings.dart
-    
 
 
